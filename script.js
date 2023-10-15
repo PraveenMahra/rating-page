@@ -12,7 +12,16 @@ ratingLabels.forEach((label, index) => {
     selectedRating = index + 1;
     label.style.backgroundColor = "var(--primary-orange)";
     label.style.color = "var(--white)";
-    updateSelectedRatingText();
+
+    ratingLabels.forEach((otherLabel, otherIndex) => {
+      if (otherIndex !== index) {
+        otherLabel.style.backgroundColor = " #272f39"; // or set it to the original color
+        otherLabel.style.color = " #78808c";
+      }
+    });
+
+    // You can also update your ratingCount here if needed
+    ratingCount = index + 1;
   });
 });
 
@@ -24,6 +33,13 @@ function updateSelectedRatingText() {
 // Add an event listener for the form submission
 form.addEventListener("submit", function (e) {
   e.preventDefault();
+
+  if (!selectedRating) {
+    alert("please select any one rating");
+    return;
+  }
+
+  updateSelectedRatingText();
 
   thankYouContainer.classList.remove("hidden");
 
