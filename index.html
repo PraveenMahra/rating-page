@@ -25,25 +25,43 @@
         appreciated to help us improve our offering!
       </p>
       <form>
-        <ul class="rating">
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-          <li>5</li>
-        </ul>
-        <button type="submit">SUBMIT</button>
+        <div class="rating">
+          <label for="star-one" class="rating-count">
+            <input id="star-one" type="radio" hidden />
+            1
+          </label>
+          <label for="star-two" class="rating-count">
+            <input id="star-two" type="radio" hidden />
+            2
+          </label>
+          <label for="star-three" class="rating-count">
+            <input id="star-three" type="radio" hidden />
+            3
+          </label>
+          <label for="star-four" class="rating-count">
+            <input id="star-four" type="radio" hidden />
+            4
+          </label>
+          <label for="star-five" class="rating-count">
+            <input id="star-five" type="radio" hidden />
+            5
+          </label>
+        </div>
+
+        <button class="btn" type="submit">SUBMIT</button>
       </form>
     </div>
 
-    <div class="thanku-container">
+    <div class="thanku-container hidden">
       <img src="./images/illustration-thank-you.svg" alt="thankicon" />
-      <p class="given-rating">You selected 4 out of 5</p>
+      <p class="given-rating"></p>
       <h2 class="thanku-heading">Thank you!</h2>
       <p class="thanku-paragraph">
         We appreciate you taking the time to give a rating. If you ever need
         more support, don’t hesitate to get in touch!
       </p>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
